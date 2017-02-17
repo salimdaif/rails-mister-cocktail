@@ -6,7 +6,8 @@ class PhotoUploader < CarrierWave::Uploader::Base
   process convert: 'jpg'
 
   version :standard do
-    resize_to_fit 800, 600
+    cloudinary_transformation radius: 20,
+      width: 350, height:350, gravity: :center, crop: :fill
   end
 
   version :thumb do

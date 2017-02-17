@@ -4,11 +4,9 @@
 
 <h1><%= @cocktail.name %></h1>
 <%= image_tag @cocktail.photo.standard %>
-
+<br>
+<br>
 <%= link_to "Add new Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-<%= link_to "Add new Picture", new_cocktail_path(@cocktail), class: "btn btn-primary" %>
-<br>
-<br>
 <br>
 <ul>
 <% @cocktail.doses.each do |dose| %>
