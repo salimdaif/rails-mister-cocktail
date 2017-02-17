@@ -8,12 +8,17 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
+   <!--  <form action="" class="navbar-wagon-search">
       <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
-    </form>
+    </form> -->
+
+    <%= form_tag(cocktails_path, method: 'get', class: 'navbar-form navbar-right') do %>
+    <%= search_field_tag 'search', nil, class: 'form-control', placeholder: 'Search'  %>
+    <%= submit_tag "Submit", class: 'navbar-wagon-search-btn hidden', :name => nil %>
+  <% end %>
 
     <!-- Notification -->
     <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
