@@ -1,7 +1,9 @@
-<h1>Cocktails#new</h1>
+<h1>Create Your Cocktail</h1>
 
 <%= simple_form_for [@cocktail] do |f| %>
   <%= f.input :name, placeholder: "Caipirinha"%>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit "Add a Cocktail", class: "btn btn-primary" %>
 <% end %>
 <br>

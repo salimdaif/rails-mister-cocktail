@@ -7,7 +7,7 @@
     <div class="product-arrow"></div>
     <div class='product-count'>95</div>
   </div>
-  <img src="https://i2.wp.com/revolutionspirits.com/wp-content/uploads/2012/05/cocktail-placeholder.jpg" alt="kudoz" class="product-image hidden-xs">
+<%= image_tag cocktail.photo.thumb %>
   <div class='product-body'>
     <h3> <%= link_to Kramdown::Document.new(cocktail.name).to_html.html_safe, cocktail_path(cocktail), :style => "text-decoration: none !important;" %> </h3>
   </div>
